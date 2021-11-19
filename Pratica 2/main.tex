@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Prática em Redes, Internet e a Web}
+\author{Lucas Vinicio Maldonado}
+\date{November 2021}
+
+\begin{document}
+
+\maketitle
+\section{Endereço do repositorio Github}
+\text{https://github.com/lucasviniciom/Atividades_Infra_DSDB}
+
+\section{Por que “faltam” camadas no roteador e no switch do slide 7?}
+O switch  não direciona através do IP, por isso não tem a camada network. Ambos não possuem App e Transport pois não são feitos para navegação, apenas para redirecionar as mensagens.
+
+\section{Por que seu roteador Wi-Fi não é um roteador “de verdade”?}
+O real roteador fica com o provedor de internet. É ele quem vai trazar a rota e direcionar um request HTTP, por exemplo, para o servidor certo. O roteador Wifi apenas modifica o sinal de internet para ser acessível por ondas eletromagnéticas no ar.
+
+\section{Qual a porta padrão dos seguintes protocolos: DHCP, HTTPS e POP3?}
+DHCP - 67; 
+HTTPS - 443;
+POP3 - 110
+
+
+\section{Ainda há endereços IPv4 disponíveis no Brasil? Quando esgotaram ou quando esgotarão?}
+Segundo a fonte a seguir, terminaram ano passado os endereços disponiveis. Há porem ainda uma fila para quem tem interesse, caso venham a se tornar disponíveis.
+https://ipv6.br/post/fim-do-ipv4/
+
+\section{Qual o ip local da sua máquina? E da macalan?}
+Local: 192.168.0.47
+
+Macalan: 200.17.202.6
+
+\section{Qual a rota padrão da sua máquina? E da macalan?}
+Local: 192.168.0.1
+
+Rota padrão: 200.17.202.62
+
+\section{Qual o caminho (route) mais comum entre sua máquina e a macalan?}
+
+Local pra Macalan:
+Tracing route to 200.17.202.62 over a maximum of 30 hops
+  1     4 ms     2 ms     3 ms  192.168.0.1
+  
+Da Macalan pra Local:
+traceroute to 192.168.0.47 (192.168.0.47), 30 hops max, 60 byte packets
+ 1  _gateway (200.17.202.62)  0.099 ms !H  0.067 ms !H *
+\section{A partir de diferentes máquinas, o caminho (route) até a macalan muda?}
+
+Não, pois o caminho depende da localização física e do provedor de internet.
+
+\end{document}
