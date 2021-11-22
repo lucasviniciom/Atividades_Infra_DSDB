@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Prática em Redes, Internet e a Web}
+\author{Lucas Vinicio Maldonado}
+\date{November 2021}
+
+\begin{document}
+
+\maketitle
+\section{Endereço do repositorio Github}
+\url{https://github.com/lucasviniciom/Atividades\_Infra\_DSDB}
+
+\section{Harvard Art Museum API}
+A API do Museu de Artes de Harvard permite explorar a coleção do Museu e integrar seus dados. Nesta aplicação básica, é escolhido uma imagem aleatoriamente e exibida ao usuário. 
+
+\section{Descrição da aplicação}
+É primeiramente escolhido um número aleatório dentro de um range no qual a maioria dos números possui uma obra.
+Em seguida é realizado um request no endereço com o método GET, junto com o número aleatório atribuído como chave de uma imagem. Também é enviado a chave para autentificação. 
+\\
+\\
+O endereço DNS é então mapeado e retornado o IP correspondente. Em seguida o metodo GET é propriamente acionado para o IP correspondente. Primeiro é recebido uma resposta se ocorreu com sucesso e em seguida o JSON propriamente com os dados solicitados. Estes dados então são abertos na aplicação e seleciona-se o endereço da imagem, seu nome, a descrição e a data de criação da obra ou da entrada na coleção.
+\\
+\\
+Ao rodar a aplicação, o usuário poderá conferir essas informações no terminal e visualizar a imagem no aplicativo padrão.
+
+\end{document}
